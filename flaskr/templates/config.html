@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Configuration{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<h3>Configuration</h3><br>
+<center>
+  <form method="post"  action="/saveconfig" method="post">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <div class="form-group">
+            <label for="indiDriverName">INDI Driver Name</label>
+            <input name="indiDriverName" id="indiDriverName" value="EQMOD Driver" required>
+        </div>
+        <div class="form-group">
+            <label for="indiServer">INDI Server</label>
+            <input name="indiServer" id="indiServer" value="Localhost" required>
+        </div>
+        <div class="form-group">
+            <label for="indiPort">INDI Server</label>
+            <input name="indiPort" id="indiPort" value="7624" required>
+        </div>
+    </div>
+    
+    </div>
+    <A HREF="/"><input class="btn btn-danger btn-sm" value="Cancel"></A>
+    <input type="submit" class="btn btn-primary btn-sm" value="Submit">
+  </form>
+</center>
+{% endblock %}

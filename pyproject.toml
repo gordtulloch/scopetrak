@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_package"
+authors = [
+    {name = "Gord Tulloch", email = "gord.tulloch@gmail.com"},
+]
+description = "ScopeTrak"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["indi", "telescope"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Framework :: Flask",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests",
+    'importlib-metadata; python_version<"3.8"',
+]
+dynamic = ["version"]
