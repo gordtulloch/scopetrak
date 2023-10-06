@@ -5,7 +5,7 @@ if [ -f 'app/.installed' ]; then
       source app/.venv/bin/activate
       python app/solver.py $1
    else
-      echo "Cannot find Starseeker (no solver.py in app directory?)"
+      echo "Cannot find ScopeTrak (no solver.py in app directory?)"
       exit 1
    fi
    deactivate
@@ -13,7 +13,7 @@ if [ -f 'app/.installed' ]; then
 fi
 
 
-echo Welcome to the Starseeker install script
+echo Welcome to the ScopeTrak install script
 echo -n Checking for python ...
 
 # check that we have python ...
@@ -24,7 +24,7 @@ then
 else
    echo No python found
    echo You need to install python from python.org
-   echo Please choose version 3.7.9
+   echo Please choose version 3.7+
    exit 1
 fi
 
@@ -90,33 +90,32 @@ touch app/.installed
 
 if [ -f 'app/solver.py' ]; then
    echo
-   echo 'Starseeker installed successfully -----------------------------'
+   echo 'ScopeTrak installed successfully -----------------------------'
    echo
-   echo "Running Starseeker. This will be slow the first time while"
+   echo "Running ScopeTrak. This will be slow the first time while"
    echo "compilation takes place but will be a lot faster"
    echo "on subsequent runs. Type the same command to run next time"
    echo
-   echo "  ./starseeker"
+   echo "  ./ScopeTrak"
    echo
-   echo "In case of any issues, run Starseeker in debug mode"
+   echo "In case of any issues, run ScopeTrak in debug mode"
    echo
-   echo "  ./starseeker debug"
+   echo "  ./ScopeTrak debug"
    echo
-   echo "then send the output by PM to me, Martin Meredith @ SGL "
+   echo "then send the output to me, Gord Tulloch gord.tulloch@gmail.com "
    echo "and I will be happy to help."
    echo
-   echo "I hope you enjoy using Starseeker. Don't forget to read"
-   echo "the manual :-)"
+   echo "I hope you enjoy using ScopeTrak!"
    echo
    echo '------------------------------------------------------------'
    python app/solver.py
 else
-   echo "Cannot find Starseeker (no solver.py in current directory?)"
+   echo "Cannot find ScopeTrak (no solver.py in current directory?)"
    exit 1
 fi
 exit 0
 
 
-# echo "starting Starseeker"
+# echo "starting ScopeTrak"
 # python solver.py debug
 
