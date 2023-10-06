@@ -154,6 +154,7 @@ while (1):        # Loop forever
             continue
         # See if User wants a solve by creating a solve.requested file
         if os.path.exists('solve.requested'):
+            os.remove('solve.requested')
             solveOk = False
 
         if debug:
