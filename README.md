@@ -1,6 +1,8 @@
 # scopetrak
 Dobsonian "guiding" system with Flask Interface
 
+CURRENT STATUS: In active development, no release version available
+
 This software is intended for installation on an INDI based computer controlling a Dobsonian telescope equipped with a GOTO system. 
 In my case I have a 16" F/4.5 telescope with an OnStep drive system, which is operated by a Raspberry Pi 4 running the Stellarmate OS. 
 
