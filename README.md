@@ -15,6 +15,8 @@ minimum tolerance (set to 30 arcsecs) whereupon the coordinates will be sync'd t
 bumps the telescope (often the case at star parties etc.) whereupon the scope will return to the correct position.
 
 Solving can be turned on and off with a Flask application accessed via a web browser. The Flask application is intended to be used on a phone or 
-similar small format screen. 
+similar small format screen. A calibration function will be included in the Flask application to allow the user to calibrate an external camera
+(for example a guide scope) which will inevitably slightly offset from the main telescope. The calibration will determine this offset so the 
+solve will compensate for it.
 
 INDI and ASTAP is required as a separate installations
