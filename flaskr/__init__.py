@@ -26,10 +26,21 @@ def create_app(test_config=None):
     def home():
         return render_template("index.html")
     
+    @app.route('/start', methods=['GET'])
+    def start_page():
+            return render_template('start.html')
+
+    @app.route('/end', methods=['GET'])
+    def end_page():
+            return render_template('end.html')
+    
     @app.route('/config', methods=['GET'])
     def config_form():
             return render_template('config.html')
     
+    @app.route('/saveconfig', methods=['GET','POST'])
+    def config_form():
+            return render_template('saveconfig.html')
     from . import db
     db.init_app(app)
 

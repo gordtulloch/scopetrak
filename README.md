@@ -1,2 +1,2 @@
 # scopetrak
-Dobsonian Control System with Django Interface
+Dobsonian Control System with Flask Interface
