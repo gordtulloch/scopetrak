@@ -14,6 +14,9 @@ the telescope is slewed to where it thinks the correct position is, and another 
 minimum tolerance (set to 30 arcsecs) whereupon the coordinates will be sync'd to the telescope. Solves can continue to be done in case the user 
 bumps the telescope (often the case at star parties etc.) whereupon the scope will return to the correct position.
 
+I imagine scopetrak will generally be used visually although there's no reason it can't be used for imaging applications as well. Primarily it's 
+intended to allow the user to avoid having to do separate slew and solve operations, or allow plate solving for visual use.
+
 Solving can be turned on and off with a Flask application accessed via a web browser. The Flask application is intended to be used on a phone or 
 similar small format screen. A calibration function will be included in the Flask application to allow the user to calibrate an external camera
 (for example a guide scope) which will inevitably slightly offset from the main telescope. The calibration will determine this offset so the 
