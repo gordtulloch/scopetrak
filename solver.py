@@ -40,7 +40,9 @@ class IndiClient(PyIndi.BaseClient):
     def serverDisconnected(self, code):
         pass
 
-# Set variables
+###############################################################
+## V A R I A B L E S                                         ##
+###############################################################
 debug=1
 exposure=5.0
 telescope="Telescope Simulator"
@@ -50,6 +52,9 @@ ccd="CCD Simulator"
 solveOk=0
 maxDeviation = 30 # In ArcSecs
 
+###############################################################
+## S E T U P                                                 ##
+###############################################################
 # connect the server
 indiclient=IndiClient()
 indiclient.setServer("localhost",7624)
@@ -93,7 +98,6 @@ telescope_on_coord_set[1].s=PyIndi.ISS_OFF # SLEW
 telescope_on_coord_set[2].s=PyIndi.ISS_OFF # SYNC
 indiclient.sendNewSwitch(telescope_on_coord_set)
 
-
 # Set up CCD camera 
 device_ccd=indiclient.getDevice(ccd)
 while not(device_ccd):
@@ -133,7 +137,6 @@ while not(ccd_ccd1):
 ###############################################################
 ## M A I N                                                   ##
 ###############################################################
-
 while (1):        # Loop forever
     # Update coordinates 
     telescope_radec=device_telescope.getNumber("EQUATORIAL_EOD_COORD")
